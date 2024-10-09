@@ -31,9 +31,9 @@ const Carrousel: React.FC<CarrouselProps> = ({ items }) => {
             className="w-full absolute h-full object-cover"
           />
           <span className="bg-black/50 absolute left-0 top-0 h-full w-full" />
-          <div className="text-white flex-col items-center gap-5 justify-center transform w-96 lg:w-[70em]">
-            <h1 className="text-3xl font-bold">{item.title}</h1>
-            <p className="text-lg">{item.sub}</p>
+          <div className="text-white flex-col items-center justify-center transform w-96 lg:w-[60em] text-center">
+            <h1 className="text-3xl font-bold mb-10 uppercase">{item.title}</h1>
+            <p className="text-xl">{item.sub}</p>
           </div>
           <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a

@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="scroll-smooth" data-theme="light" lang="pt-br">
+    <html className="scroll-smooth font-roboto selection:bg-ppblumine" data-theme="light" lang="pt-br">
       <body>
         <header>
           <Navbar />

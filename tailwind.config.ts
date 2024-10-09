@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        title: ["Montserrat", "sans-serif"],
+        roboto: ["roboto", "sans-serif"],
+        lato: ["lato", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
