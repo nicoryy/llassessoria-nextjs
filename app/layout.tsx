@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
-import ScrollToTopButton from "./../components/ScrollTop";
+import { Navbar } from "@/components/layout/Navbar";
+import ScrollToTopButton from "../components/ui/ScrollTop";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",

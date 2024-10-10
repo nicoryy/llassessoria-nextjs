@@ -1,11 +1,11 @@
-import Carrousel from "@/components/Carrousel";
+import Carrousel from "@/components/ui/Carrousel";
 import { data } from "@/data/CarrouselData";
 import Image from "next/image";
 import { FaSuitcase } from "react-icons/fa";
 
 import img1 from "../assets/random/sobre1.jpg";
 import img2 from "../assets/eventos/ampliando_itarema_cascavel/img1.jpg";
-import Title from "@/components/Title";
+import Title from "@/components/ui/Title";
 
 export default function Home() {
   return (
