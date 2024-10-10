@@ -6,7 +6,6 @@ export const Navbar = () => {
   return (
     // DaisyUI
     <div className="navbar bg-base-100 lg:px-10">
-      <section></section>
       <div className="navbar-start ">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -101,11 +100,7 @@ export const Navbar = () => {
 
         <label className="swap swap-rotate">
           {/* this hidden checkbox controls the state */}
-          <input
-            type="checkbox"
-            className="theme-controller"
-            value="dark"
-          />
+          <input type="checkbox" className="theme-controller" value="dark" />
 
           {/* sun icon */}
           <svg
