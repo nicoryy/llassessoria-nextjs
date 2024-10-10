@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
+import ScrollToTopButton from "./../components/ScrollTop";
+
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -35,6 +37,8 @@ export default function RootLayout({
           <Navbar />
         </header>
         {children}
+
+        <ScrollToTopButton />
       </body>
     </html>
   );
