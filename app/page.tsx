@@ -6,13 +6,14 @@ import { FaSuitcase } from "react-icons/fa";
 import img1 from "../assets/random/sobre1.jpg";
 import img2 from "../assets/eventos/ampliando_itarema_cascavel/img1.jpg";
 import Title from "@/components/ui/Title";
+import CardBlog from "@/components/layout/CardBlog";
 
 export default function Home() {
   return (
     <>
       <Carrousel items={data.map((item) => ({ ...item, img: item.img.src }))} />
 
-      {/* Services */}
+      {/* Serviços */}
       <section className="my-20 lg:mx-40 mx-20">
         <Title title="Serviços" />
 
@@ -88,7 +89,7 @@ export default function Home() {
       <section className="my-20 lg:mx-40 mx-20">
         <Title title="Sobre a L&L" />
 
-        <p className="text-normal my-10 text-center lg:mx-40">
+        <p className="text-normal my-5 text-center lg:mx-40">
           Com mais de 15 anos de experiência, a L&L Assessoria se dedica a
           fornecer serviços de consultoria personalizados que impulsionam o
           sucesso de instituições públicas.
@@ -174,6 +175,17 @@ export default function Home() {
           src={img1}
           className="w-full object-cover h-56 lg:h-full"
         />
+      </section>
+
+      {/* Noticias */}
+      <section className="my-20 lg:mx-40 mx-20">
+        <Title title="Noticias" />
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 my-8">
+          <CardBlog  />
+          <CardBlog />
+          <CardBlog />
+        </div>
       </section>
     </>
   );
