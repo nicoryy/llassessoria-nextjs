@@ -3,7 +3,6 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import ScrollToTopButton from "./../components/ScrollTop";
 
-
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
 //   variable: "--font-geist-sans",
