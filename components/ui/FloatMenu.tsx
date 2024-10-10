@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
+import ThemeController from "../util/ThemeController";
 
-const ScroolTop = () => {
+const FloatMenu = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -29,16 +30,23 @@ const ScroolTop = () => {
   }, []);
 
   return (
-    <FaArrowUp
-      onClick={() => scrollToTop()}
-      className={`fixed bottom-10 right-10 z-50 bg-primary p-3 cursor-pointer rounded-md 
-        transition duration-500 ease-in-out bg-opacity-80 ${
-          isVisible ? "translate-x-0" : "translate-x-40"
-        }`}
-      size={40}
-      color="white"
-    />
+    <section
+      className={`fixed bottom-10 right-10 z-50 transition duration-500 ease-in-out bg-opacity-80 flex flex-col gap-5 ${
+        isVisible ? "translate-x-0" : "translate-x-40"
+      }`}
+    >
+      <FaArrowUp
+        onClick={() => scrollToTop()}
+        className="bg-primary p-3 cursor-pointer rounded-md "
+        size={40}
+        color="white"
+      />
+
+      {/* CONTINUAR THEME CONTROLLER STYLE */}
+      
+      <ThemeController />
+    </section>
   );
 };
 
-export default ScroolTop;
+export default FloatMenu;
