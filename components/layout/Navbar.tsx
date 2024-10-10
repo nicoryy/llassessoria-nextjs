@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "./../assets/logomarca.png";
+import logo from "./../../assets/logomarca.png";
 import Link from "next/link";
 
 export const Navbar = () => {
