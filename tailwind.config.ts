@@ -43,9 +43,9 @@ const config: Config = {
       {
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
-          primary: "#1b5b7b", //azul e
+          primary: "#1484a6", //azul e
           secondary: "#4a5927", //verde e
-          accent: "#1484a6", //azul c
+          accent: "#1b5b7b", //azul c
         },
       },
     ],
