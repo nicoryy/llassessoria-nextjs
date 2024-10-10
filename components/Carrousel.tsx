@@ -38,13 +38,13 @@ const Carrousel: React.FC<CarrouselProps> = ({ items }) => {
           <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a
               href={`#slide${item.id === 1 ? items.length : item.id - 1}`}
-              className="btn btn-circle"
+              className="btn-circle text-3xl text-[#f3f3f3]"
             >
               ❮
             </a>
             <a
               href={`#slide${item.id === items.length ? 1 : item.id + 1}`}
-              className="btn btn-circle"
+              className="btn-circle text-3xl text-[#f3f3f3]"
             >
               ❯
             </a>

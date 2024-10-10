@@ -38,7 +38,7 @@ export default function Home() {
               <p className="font-bold font-title text-xl text-primary ">
                 Consultoria e Assessoria Especializada
               </p>
-              <p className="text-gray-800 text-sm">
+              <p className="text-sm">
                 Esclarecemos dúvidas, fornecemos orientações e guiamos nossos clientes sobre
                 procedimentos de maneira legal e coerente
               </p>
@@ -52,7 +52,7 @@ export default function Home() {
               <p className="font-bold font-title text-xl text-primary ">
                 Acompanhamento de processos
               </p>
-              <p className="text-gray-800 text-sm">
+              <p className="text-sm">
                 Utilizamos ferramentas para melhor acompanhamento de procedimentos administrativos
                 nas contratações públicos do seu órgão
               </p>
@@ -64,7 +64,7 @@ export default function Home() {
             </span>
             <div>
               <p className="font-bold font-title text-xl text-primary ">Rotinas Administrativas</p>
-              <p className="text-gray-800 text-sm">
+              <p className="text-sm">
                 Auxiliamos os setores envolvidos nos processos administrativos, para que possam
                 desempenhas suas ações em obediências as normas e conceitos aplicados.
               </p>
@@ -120,7 +120,7 @@ export default function Home() {
 
       {/* CTA */}
       <section
-        className="overflow-hidden bg-neutral-200 sm:grid 
+        className="overflow-hidden bg-base-300 sm:grid 
         sm:grid-cols-2 "
       >
         <div className="p-8 md:p-12 lg:px-16 lg:py-24">
