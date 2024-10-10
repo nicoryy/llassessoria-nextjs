@@ -47,7 +47,7 @@ export const Navbar = () => {
               </ul>
             </li>
             <li>
-              <Link href={"/"}>Sobre</Link>
+              <Link href={"/sobre"}>Sobre</Link>
             </li>
             <li>
               <Link href={"/"}>Eventos</Link>
@@ -55,12 +55,7 @@ export const Navbar = () => {
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">
-          <Image
-            src={logo}
-            alt="Logo da L&L Assessoria e Serviços"
-            width={100}
-            height={100}
-          />
+          <Image src={logo} alt="Logo da L&L Assessoria e Serviços" width={100} height={100} />
         </a>
       </div>
 
@@ -70,7 +65,7 @@ export const Navbar = () => {
             <Link href={"/"}>Home</Link>
           </li>
           <li>
-            <details>
+            <details className="z-50">
               <summary>Acervo</summary>
               <ul className="p-2">
                 <li>
@@ -86,7 +81,7 @@ export const Navbar = () => {
             </details>
           </li>
           <li>
-            <Link href={"/"}>Sobre</Link>
+            <Link href={"/sobre"}>Sobre</Link>
           </li>
           <li>
             <Link href={"/"}>Eventos</Link>
@@ -95,7 +90,9 @@ export const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-        <Link href={'/'} className="btn bg-ppblueChill text-white">Contato</Link>
+        <Link href={"/"} className="btn bg-ppblueChill text-white">
+          Contato
+        </Link>
       </div>
     </div>
   );
