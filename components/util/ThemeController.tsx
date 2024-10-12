@@ -1,12 +1,16 @@
-const ThemeController = () => {
+interface ControlletProps {
+  classNameProp?: string;
+}
+
+const ThemeController = ({ classNameProp }: ControlletProps) => {
   return (
-    <label className="swap swap-rotate">
+    <label className={`swap swap-rotate text-base ${classNameProp}`}>
       {/* this hidden checkbox controls the state */}
       <input type="checkbox" className="theme-controller" value="dark" />
 
       {/* sun icon */}
       <svg
-        className="swap-off h-8 w-8 lg:h-10 lg:w-10 fill-current"
+        className="swap-off h-4 w-4 lg:h-10 lg:w-10 fill-current"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
@@ -15,7 +19,7 @@ const ThemeController = () => {
 
       {/* moon icon */}
       <svg
-        className="swap-on h-8 w-8 lg:h-10 lg:w-10 fill-current"
+        className="swap-on h-4 w-4 lg:h-10 lg:w-10 fill-current"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >

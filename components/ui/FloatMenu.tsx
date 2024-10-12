@@ -31,7 +31,7 @@ const FloatMenu = () => {
 
   return (
     <section
-      className={`fixed bottom-10 right-10 z-50 transition duration-500 ease-in-out bg-opacity-80 flex flex-col gap-5 ${
+      className={`fixed bottom-10 right-10 z-50 transition duration-500 ease-in-out bg-opacity-80 flex flex-col gap-3 ${
         isVisible ? "translate-x-0" : "translate-x-40"
       }`}
     >
@@ -42,9 +42,7 @@ const FloatMenu = () => {
         color="white"
       />
 
-      {/* CONTINUAR THEME CONTROLLER STYLE */}
-      
-      <ThemeController />
+      <ThemeController classNameProp="bg-primary p-3 cursor-pointer rounded-md size text-white" />
     </section>
   );
 };
