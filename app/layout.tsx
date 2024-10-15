@@ -5,17 +5,6 @@ import FloatMenu from "../components/ui/FloatMenu";
 import { ThemeProvider } from "@/components/util/context/ThemeProvider";
 import Footer from "@/components/layout/Footer";
 
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
-
 export const metadata: Metadata = {
   title: "L&L Assessoria e Serviços",
   description:
