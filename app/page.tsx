@@ -1,7 +1,7 @@
 import Carrousel from "@/components/ui/Carrousel";
 import { data } from "@/data/CarrouselData";
 import Image from "next/image";
-import { FaSuitcase } from "react-icons/fa";
+import { FaClock, FaPhoneAlt, FaSuitcase } from "react-icons/fa";
 
 import img1 from "../assets/random/sobre1.jpg";
 import img2 from "../assets/eventos/ampliando_itarema_cascavel/img1.jpg";
@@ -9,6 +9,9 @@ import Title from "@/components/ui/Title";
 import CardBlog from "@/components/layout/CardBlog";
 
 import { news } from "../data/news";
+import { prefeituras } from "@/data/prefeituras";
+import { IoMdMail } from "react-icons/io";
+import { FaLocationDot } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -16,7 +19,7 @@ export default function Home() {
       <Carrousel items={data.map((item) => ({ ...item, img: item.img.src }))} />
 
       {/* Serviços */}
-      <section className="my-20 lg:mx-40 mx-20">
+      <section className="my-20 lg:mx-40 mx-10">
         <Title title="Serviços" />
 
         <p className="text-normal my-8 mb-14 text-center">
@@ -82,7 +85,7 @@ export default function Home() {
       </div>
 
       {/* Sobre */}
-      <section className="my-20 lg:mx-40 mx-20">
+      <section className="my-20 lg:mx-40 mx-10">
         <Title title="Sobre a L&L" />
 
         <p className="text-normal my-5 text-center lg:mx-40">
@@ -147,8 +150,7 @@ export default function Home() {
                 className="inline-block rounded bg-accent px-12 py-3 
                 text-sm font-medium text-white transition 
                 hover:bg-primary-content
-                hover:text-primary focus:outline-none focus:ring
-                focus:ring-yellow-400"
+                hover:text-primary"
               >
                 Solicite Sua Consultoria
               </a>
@@ -168,7 +170,7 @@ export default function Home() {
       </section>
 
       {/* Noticias */}
-      <section className="my-20 lg:mx-40 mx-20">
+      <section className="my-20 lg:mx-40 mx-10">
         <Title title="Noticias" />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 my-8">
@@ -183,6 +185,152 @@ export default function Home() {
             />
           ))}
         </div>
+      </section>
+
+      {/* Clientes */}
+      <section className="my-20 lg:mx-40 mx-10 ">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Title title="Clientes" />
+          <div className="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2 xl:grid-cols-4">
+            {prefeituras.map((item) => (
+              <a
+                href={item.link}
+                target="_blank"
+                key={item.key}
+                className="flex justify-center items-center bg-base-300 shadow-sm h-24 rounded-2xl"
+              >
+                <img src={item.img.src} className="w-32" alt={item.name} />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contato */}
+      <section className="my-20 lg:mx-40 mx-10">
+        <section className="bg-base-200">
+          <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+            <Title title="Contato" />
+
+            <div className="mt-10 grid grid-cols-1 gap-x-16 gap-y-8">
+              <article className="grid grid-cols-2 lg:pl-0 gap-5 justify-items-center">
+                <div className="flex flex-col text-center lg:flex-row lg:text-left gap-5 items-center">
+                  <div className="bg-primary p-2 rounded-full items-center">
+                    <FaPhoneAlt size={20} color="white" className="relative" />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <p className="text-lg font-semibold text-primary">Telefone</p>
+                    <p className="text-sm text-base-content">(85) 3621-3181</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col text-center lg:flex-row lg:text-left gap-5 items-center">
+                  <div className="bg-primary p-2 rounded-full items-center">
+                    <IoMdMail size={20} color="white" className="relative" />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <p className="text-lg font-semibold text-primary">E-mail</p>
+                    <p className="text-sm text-base-content break-words lg:max-w-none max-w-14">
+                      contato_ll@hotmail.com
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col text-center lg:flex-row lg:text-left gap-5 items-center">
+                  <div className="bg-primary p-2 rounded-full items-center">
+                    <FaClock size={20} color="white" className="relative" />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <p className="text-lg font-semibold text-primary">Horário de Atendimento</p>
+                    <p className="text-sm text-base-content max-w-40">
+                      Seg a Sex 7h30–17h00 Sab e Dom (Fechado)
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col text-center lg:flex-row lg:text-left gap-5 items-center">
+                  <div className="bg-primary p-2 rounded-full items-center">
+                    <FaLocationDot size={20} color="white" className="relative" />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <p className="text-lg font-semibold text-primary">Endereço</p>
+                    <p className="text-sm text-base-content max-w-52">
+                      Avenida Bezerra de Menezes, 1250, sala 803, São Gerardo
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <div className="rounded-lg bg-base-300 p-8 shadow-lg lg:col-span-3 lg:p-12">
+                <form action="#" className="space-y-4">
+                  <div>
+                    <label className="sr-only" htmlFor="name">
+                      Name
+                    </label>
+                    <input
+                      className="w-full rounded-lg focus:outline-primary p-3 text-sm"
+                      placeholder="Nome e Sobrenome"
+                      type="text"
+                      id="name"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div>
+                      <label className="sr-only" htmlFor="email">
+                        Email
+                      </label>
+                      <input
+                        className="w-full rounded-lg focus:outline-primary p-3 text-sm"
+                        placeholder="Email"
+                        type="email"
+                        id="email"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="sr-only" htmlFor="phone">
+                        Phone
+                      </label>
+                      <input
+                        className="w-full rounded-lg focus:outline-primary p-3 text-sm"
+                        placeholder="Número de telefone"
+                        type="tel"
+                        id="phone"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="sr-only" htmlFor="message">
+                      Message
+                    </label>
+
+                    <textarea
+                      className="w-full rounded-lg focus:outline-primary p-3 text-sm"
+                      placeholder="Mensagem"
+                      rows={8}
+                      id="message"
+                    ></textarea>
+                  </div>
+
+                  <div className="mt-4">
+                    <button
+                      type="submit"
+                      className="inline-block w-full rounded-lg bg-primary px-5 py-3 font-medium text-white sm:w-auto"
+                    >
+                      Send Enquiry
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
     </>
   );
