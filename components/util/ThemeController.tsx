@@ -1,9 +1,9 @@
-interface ControlletProps {
+interface ControllerProps {
   classNameProp?: string;
   sizeProp?: number;
 }
 
-const ThemeController = ({ classNameProp, sizeProp = 8 }: ControlletProps) => {
+const ThemeController = ({ classNameProp, sizeProp = 8 }: ControllerProps) => {
   return (
     <label className={`swap swap-rotate text-base ${classNameProp}`}>
       {/* this hidden checkbox controls the state */}
