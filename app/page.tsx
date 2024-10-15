@@ -323,7 +323,7 @@ export default function Home() {
                       type="submit"
                       className="inline-block w-full rounded-lg bg-primary px-5 py-3 font-medium text-white sm:w-auto"
                     >
-                      Send Enquiry
+                      Enviar Consulta
                     </button>
                   </div>
                 </form>
