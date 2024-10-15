@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import FloatMenu from "../components/ui/FloatMenu";
+import { ThemeProvider } from "@/components/util/context/ThemeProvider";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -26,19 +27,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      className="scroll-smooth font-roboto selection:bg-primary-content"
-      data-theme="light"
-      lang="pt-br"
-    >
-      <body>
-        <header>
-          <Navbar />
-        </header>
-        {children}
+    <ThemeProvider>
+      <html
+        className="scroll-smooth font-roboto selection:bg-primary-content"
+        data-theme="light"
+        lang="pt-br"
+      >
+        <body>
+          <header>
+            <Navbar />
+          </header>
+          {children}
 
-        <FloatMenu />
-      </body>
-    </html>
+          <FloatMenu />
+        </body>
+      </html>
+    </ThemeProvider>
   );
 }
