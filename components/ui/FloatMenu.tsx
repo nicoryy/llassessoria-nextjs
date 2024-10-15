@@ -42,10 +42,7 @@ const FloatMenu = () => {
         color="white"
       />
 
-      <ThemeController
-        sizeProp={4}
-        classNameProp="bg-primary p-3 cursor-pointer rounded-md size text-white"
-      />
+      <ThemeController classNameProp="bg-primary p-3 cursor-pointer rounded-md size text-white" />
     </section>
   );
 };

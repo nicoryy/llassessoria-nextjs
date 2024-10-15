@@ -1,12 +1,11 @@
 "use client"; // Necessário para que o componente funcione no cliente
 
-import { useTheme } from './context/ThemeProvider';
+import { useTheme } from "./context/ThemeProvider";
 interface ControllerProps {
   classNameProp?: string;
-  sizeProp?: number;
 }
 
-const ThemeController = ({ classNameProp, sizeProp = 4 }: ControllerProps) => {
+const ThemeController = ({ classNameProp }: ControllerProps) => {
   // Utiliza o hook useTheme para acessar o contexto de tema
   const { theme, toggleTheme } = useTheme();
 
@@ -22,7 +21,7 @@ const ThemeController = ({ classNameProp, sizeProp = 4 }: ControllerProps) => {
 
       {/* Ícone do sol (para tema claro) */}
       <svg
-        className={`swap-off h-${sizeProp} w-${sizeProp} fill-current`}
+        className={`swap-off h-4 w-4 fill-current`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
@@ -31,7 +30,7 @@ const ThemeController = ({ classNameProp, sizeProp = 4 }: ControllerProps) => {
 
       {/* Ícone da lua (para tema escuro) */}
       <svg
-        className={`swap-on h-${sizeProp} w-${sizeProp} fill-current`}
+        className={`swap-on h-4 w-4 fill-current`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
