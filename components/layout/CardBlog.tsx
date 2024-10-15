@@ -1,32 +1,40 @@
-import React from "react";
+interface CardBlogProps {
+  title: string;
+  description: string;
+  img: string;
+  data: string;
+  link: string;
+}
 
-const CardBlog = () => {
+const CardBlog = ({ title, description, img, data, link }: CardBlogProps) => {
   return (
-    <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
-      <img
-        alt=""
-        src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-        className="h-56 w-full object-cover"
-      />
+    <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg hover:shadow-base-300">
+      <img alt={title} src={img} className="h-56 w-full object-cover" />
 
       <div className="bg-base-200 p-4 sm:p-6">
         <time dateTime="2022-10-10" className="block text-xs text-base-content">
           {" "}
-          10th Oct 2022{" "}
+          {data}{" "}
         </time>
 
         <a href="#">
-          <h3 className="mt-0.5 text-lg text-base-content font-bold">
-            How to position your furniture for positivity
-          </h3>
+          <h3 className="mt-0.5 text-lg text-base-content font-bold">{title}</h3>
         </a>
 
-        <p className="mt-2 line-clamp-3 text-sm/relaxed text-base-content">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus
-          pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis
-          quidem, mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius
-          atque dignissimos. Molestias explicabo corporis voluptatem?
-        </p>
+        <p className="mt-2 line-clamp-3 text-sm/relaxed text-base-content">{description}</p>
+
+        <a
+          href={link}
+          className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent"
+        >
+          Veja mais
+          <span
+            aria-hidden="true"
+            className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
+          >
+            &rarr;
+          </span>
+        </a>
       </div>
     </article>
   );
