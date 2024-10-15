@@ -3,21 +3,14 @@ import logo from "@/assets/logoSquare.png";
 
 const Footer = () => {
   return (
-    <footer className="footer bg-accent text-base-100 p-10">
-      <aside>
-        <Image
-          width={200}
-          height={200}
-          className="bg-accent-content rounded-lg p-10"
-          loading="lazy"
-          src={logo}
-          alt="L&L Assessoria e Serviços"
-        />
-        <p className="text-xl font-bold">L&L Assessoria e Serviços Ltda.</p>
-        <p className="text-sm">Oferecendo consultoria desde 2009</p>
-      </aside>
+    <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
+      <nav className="grid grid-flow-col gap-4">
+        <a className="link link-hover">About us</a>
+        <a className="link link-hover">Contact</a>
+        <a className="link link-hover">Jobs</a>
+        <a className="link link-hover">Press kit</a>
+      </nav>
       <nav>
-        <h6 className="footer-title">Social</h6>
         <div className="grid grid-flow-col gap-4">
           <a>
             <svg
@@ -54,6 +47,22 @@ const Footer = () => {
           </a>
         </div>
       </nav>
+      <aside>
+        <p>
+          Copyright © {new Date().getFullYear()} - Todos os direitos reservados pela LL Assessorias
+          e Serviços Ltda.
+        </p>
+        <p>
+          Site desenvolvido por:{" "}
+          <a
+            target="_blank"
+            className="link text-purple-500 font-bold"
+            href="https://github.com/nicoryy"
+          >
+            Pedro Nicory
+          </a>
+        </p>
+      </aside>
     </footer>
   );
 };
