@@ -3,6 +3,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import FloatMenu from "../components/ui/FloatMenu";
 import { ThemeProvider } from "@/components/util/context/ThemeProvider";
+import Footer from "@/components/layout/Footer";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -38,7 +39,8 @@ export default function RootLayout({
             <Navbar />
           </header>
           {children}
-
+          <Footer />
+          {/* Float Menu */}
           <FloatMenu />
         </body>
       </html>
