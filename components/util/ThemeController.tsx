@@ -6,7 +6,7 @@ interface ControllerProps {
   sizeProp?: number;
 }
 
-const ThemeController = ({ classNameProp, sizeProp = 8 }: ControllerProps) => {
+const ThemeController = ({ classNameProp, sizeProp = 4 }: ControllerProps) => {
   // Utiliza o hook useTheme para acessar o contexto de tema
   const { theme, toggleTheme } = useTheme();
 
