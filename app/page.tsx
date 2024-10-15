@@ -199,7 +199,7 @@ export default function Home() {
                 key={item.key}
                 className="flex justify-center items-center bg-base-300 shadow-sm h-24 rounded-2xl"
               >
-                <img src={item.img.src} className="w-32" alt={item.name} />
+                <Image src={item.img.src} width={128} height={128}  alt={item.name} />
               </a>
             ))}
           </div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface CardBlogProps {
   title: string;
   description: string;
@@ -9,7 +11,7 @@ interface CardBlogProps {
 const CardBlog = ({ title, description, img, data, link }: CardBlogProps) => {
   return (
     <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg hover:shadow-base-300">
-      <img alt={title} src={img} className="h-56 w-full object-cover" />
+      <Image alt={title} width={224} height={224} src={img} className=" w-full object-cover" />
 
       <div className="bg-base-200 p-4 sm:p-6 h-full">
         <time dateTime="2022-10-10" className="block text-xs text-base-content">
