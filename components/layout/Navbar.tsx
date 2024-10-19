@@ -54,14 +54,15 @@ export const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">
+        <Link href="/" className="btn btn-ghost text-xl">
           <Image
             src={logo}
+            loading="lazy"
             alt="Logo da L&L Assessoria e Serviços"
             width={100}
             height={100}
           />
-        </a>
+        </Link>
       </div>
 
       <div className="bg-pp navbar-center hidden lg:flex">
