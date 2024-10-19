@@ -18,7 +18,7 @@ export default function sobre() {
     <>
       <Hero title="Sobre a L & L" srcImage={heroimage} />
       <section className="my-10 mx-20 text-center lg:text-left">
-        <h1 className="text-primary font-bold font-title text-2xl">
+        <h1 className="text-primary font-bold font-title text-2xl ">
           Nossa Missão: Transformar a Gestão Pública com Consciência,
           Engajamento e Decisões Assertivas
         </h1>
@@ -82,7 +82,7 @@ export default function sobre() {
 
         <div className="grid gap-5">
           <div className="grid place-items-center gap-2">
-            <h3 className="text-primary text-left font-bold font-title text-2xl">
+            <h3 className="text-primary text-center lg:text-left font-bold font-title text-2xl">
               Encorajamento: Fortalecendo Capacidades e Confianças
             </h3>
             <hr className="w-32 items-center border-2 border-primary" />
@@ -103,7 +103,7 @@ export default function sobre() {
       <section className="py-20 px-20 gap-10 flex flex-col lg:grid grid-cols-1 lg:grid-cols-2 place-items-center order-last ">
         <div className="grid gap-5">
           <div className="grid place-items-center gap-2">
-            <h3 className="text-primary text-left font-bold font-title text-2xl lg:text-right">
+            <h3 className="text-primary text-center font-bold font-title text-2xl lg:text-right">
               Engajamento: Conectando Pessoas e Ideias
             </h3>
             <hr className="w-32 items-center border-2 border-primary" />
@@ -143,7 +143,7 @@ export default function sobre() {
 
         <div className="grid gap-5">
           <div className="grid place-items-center gap-2">
-            <h3 className="text-primary text-left font-bold font-title text-2xl">
+            <h3 className="text-primary text-center lg:text-left font-bold font-title text-2xl">
               Compromisso com a Ética e a Transparência
             </h3>
             <hr className="w-32 items-center border-2 border-primary" />
