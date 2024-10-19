@@ -10,24 +10,36 @@ const Footer = () => {
   return (
     <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
       <nav className="grid grid-flow-col gap-4">
-        <a className="link link-hover">Sobre</a>
-        <a className="link link-hover">Contato</a>
-        <a className="link link-hover">Certificados</a>
-        <a className="link link-hover">Acervo Público</a>
-        <a className="link link-hover">Galeria de eventos</a>
+        <Link href='/sobre' className="link link-hover">Sobre</Link>
+        <Link href='/contato' className="link link-hover">Contato</Link>
+        <Link href='/certificados' className="link link-hover">Certificados</Link>
+        <Link href='/acervo' className="link link-hover">Acervo Público</Link>
+        <Link href='/galeria' className="link link-hover">Galeria de eventos</Link>
       </nav>
       <nav>
         <div className="grid grid-flow-col gap-4">
-          <Link href="/" className="link link-hover">
+          <Link
+            href="https://twitter.com/Llassessoria_"
+            className="link link-hover"
+          >
             <FaXTwitter size={30} />
           </Link>
-          <Link href="/" className="link link-hover">
+          <Link
+            href="http://facebook.com/llassessoriaeservicos"
+            className="link link-hover"
+          >
             <FaFacebook size={30} />
           </Link>
-          <Link href="/" className="link link-hover">
+          <Link
+            href="http://instagram.com/llassessoriaeservico"
+            className="link link-hover"
+          >
             <FaInstagram size={30} />
           </Link>
-          <Link href="/" className="link link-hover">
+          <Link
+            href="https://www.linkedin.com/in/ll-assessoria-e-servi%C3%A7os-6513ab216/?originalSubdomain=br"
+            className="link link-hover"
+          >
             <FaLinkedin size={30} />
           </Link>
         </div>
