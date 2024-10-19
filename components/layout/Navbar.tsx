@@ -1,12 +1,38 @@
+"use client";
+
 import Image from "next/image";
 import logo from "./../../assets/logomarca.png";
 import Link from "next/link";
 import ThemeController from "../util/ThemeController";
+import { useEffect, useState } from "react";
 
 export const Navbar = () => {
+  const [isFixed, setFixed] = useState(false);
+
+  const stickyHeader = () => {
+    if (window.scrollY >= 30) {
+      setFixed(true);
+    } else {
+      setFixed(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", stickyHeader);
+    return () => {
+      window.addEventListener("scroll", stickyHeader);
+    };
+  }, []);
+
   return (
     // DaisyUI
-    <div className="navbar bg-base-100 lg:px-10">
+    <div
+      className={`navbar bg-base-100 lg:px-10 ${
+        isFixed
+          ? "fixed z-50 shadow-xl bg-opacity-90 backdrop-blur-md"
+          : ""
+      }`}
+    >
       <div className="navbar-start ">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
