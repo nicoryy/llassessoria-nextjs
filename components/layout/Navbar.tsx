@@ -50,7 +50,7 @@ export const Navbar = () => {
               <Link href={"/sobre"}>Sobre</Link>
             </li>
             <li>
-              <Link href={"/"}>Eventos</Link>
+              <Link href={"/galeria"}>Eventos</Link>
             </li>
           </ul>
         </div>
@@ -89,7 +89,7 @@ export const Navbar = () => {
             <Link href={"/sobre"}>Sobre</Link>
           </li>
           <li>
-            <Link href={"/"}>Eventos</Link>
+            <Link href={"/galeria"}>Eventos</Link>
           </li>
         </ul>
       </div>
