@@ -5,7 +5,7 @@ Bem-vindo ao repositório oficial do site da L&L Assessoria e Serviços, desenvo
 ## 🚧 Status do Projeto
 O projeto está em desenvolvimento. Funcionalidades essenciais estão sendo construídas, e outras melhorias serão feitas nas próximas versões. Este documento será atualizado conforme o projeto avança.
 
-Versão Atual: 0.1.0 (em desenvolvimento)
+Versão Atual: 0.2.0 (em desenvolvimento)
 
 ## 📋 Tecnologias e Ferramentas
 Abaixo estão as tecnologias e ferramentas utilizadas até o momento. Este projeto está preparado para incorporar novas ferramentas conforme necessário.
