@@ -20,7 +20,6 @@ export default function RootLayout({
     <ThemeProvider>
       <html
         className="scroll-smooth font-roboto selection:bg-primary-content"
-        data-theme="light"
         lang="pt-br"
       >
         <body>
