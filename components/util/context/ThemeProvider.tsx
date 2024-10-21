@@ -16,19 +16,21 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState(
-    window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light"
-  );
+  const [theme, setTheme] = useState<string>("light");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setTheme(prefersDarkScheme ? "dark" : "light");
+    }
+  }, []);
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme); // Define o tema no elemento raiz
+    document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
   return (
