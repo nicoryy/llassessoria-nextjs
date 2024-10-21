@@ -1,12 +1,33 @@
+'use client'
+
 import Hero from "@/components/layout/Hero";
 
 import img from "@/assets/lel/galeriabanner.jpg";
 import Title from "@/components/ui/Title";
+import EventDetail from '@/components/ui/EventDetail'
 
 import { events } from "@/data/events";
 import Image from "next/image";
+import { ReactElement, useState } from "react";
+
+interface Event {
+  key: number;
+  name: string;
+  data: string;
+  img: string;
+  list: { key: number; ref: string }[];
+}
+
 
 export default function galeria() {
+  const [detail, setDetail] = useState<ReactElement[]>([]);
+
+  const detailPage = (item: Event) => {
+    setDetail([
+      <EventDetail key={item.key} item={item} onClose={() => setDetail([])} />,
+    ]); // Changed to array with one element
+  };
+
   return (
     <>
       <Hero title="Galeria de Eventos" srcImage={img} />
