@@ -1,3 +1,4 @@
+import Image, { StaticImageData } from "next/image";
 import { useEffect, useRef } from "react";
 import { IoClose } from "react-icons/io5";
 
@@ -5,8 +6,8 @@ interface Event {
   key: number;
   name: string;
   data: string;
-  img: string;
-  list: { key: number; ref: string }[];
+  img: StaticImageData;
+  list: { key: number; ref: StaticImageData }[];
 }
 
 const EventDetail = ({
@@ -36,7 +37,7 @@ const EventDetail = ({
     <section
       ref={blackRef}
       key={item.key}
-      className="w-full h-full font-title bg-black bg-opacity-70 fixed z-10 grid place-items-center"
+      className="w-full h-full font-title bg-black bg-opacity-70 fixed z-50 grid place-items-center"
     >
       <IoClose
         size={50}
@@ -52,10 +53,12 @@ const EventDetail = ({
             className="grid lg:grid-cols-3 gap-5"
           >
             {item.list.map((image) => (
-              <img
+              <Image
+                width={240}
+                height={240}
                 key={image.key}
                 src={image.ref}
-                alt={image.ref}
+                alt={'imagem'}
                 className="w-60"
               />
             ))}
