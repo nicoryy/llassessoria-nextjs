@@ -5,6 +5,7 @@ import Title from "@/components/ui/Title";
 
 import { events } from "@/data/events";
 import Image from "next/image";
+import EventButton from "@/components/ui/EventButton";
 
 export default function galeria() {
   return (
@@ -38,14 +39,7 @@ export default function galeria() {
                     </p>
 
                     <div className="flex flex-col gap-2">
-                      <button
-                        className="flex items-center gap-2 w-24 relative border-ppwoodland text-sm"
-                        // onClick={() => detailPage(item)}
-                      >
-                        <p className="text-sm text-primary font-bold uppercase">
-                          Ler Mais <span>→</span>
-                        </p>
-                      </button>
+                      <EventButton title={item.name} />
                       <p className="text-xs">{item.data}</p>
                     </div>
                   </div>
