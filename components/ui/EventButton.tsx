@@ -1,39 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import React, { useRef } from "react";
 
-const EventButton = ({ title }: { title: string }) => {
-  const [isOpen, setIsOpen] = useState(false);
+interface EventButtonProps {
+  title: string;
+  date: string;
+}
 
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
+const EventButton = ({ title, date }: EventButtonProps) => {
+  const modalRef = useRef<HTMLDialogElement>(null);
+
+  const openModal = () => {
+    if (modalRef.current) {
+      modalRef.current.showModal();
+    }
   };
 
   return (
     <>
-      {/* Button to open modal */}
-      <button onClick={toggleModal} className="btn btn-primary">
-        Open Modal
+      <button className="btn btn-primary text-primary-content" onClick={openModal}>
+        Veja mais →
       </button>
+      <dialog id="my_modal_2" className="modal" ref={modalRef}>
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">{title}</h3>
+          <p className="py-4">{date}</p>
 
-      {/* Modal */}
-      {isOpen && (
-        <div className="modal modal-open">
-          <div className="modal-box">
-            <h3 className="font-bold text-lg">Hello, DaisyUI Modal in TSX!</h3>
-            <p className="py-4">
-              This is a simple modal example using DaisyUI and TSX.
-            </p>
+          {/* quero aqui */}
 
-            <div className="modal-action">
-              {/* Button to close modal */}
-              <button onClick={toggleModal} className="btn">
-                Close
-              </button>
-            </div>
-          </div>
+          <form method="dialog" className="btn">
+            <button>Fechar</button>
+          </form>
         </div>
-      )}
+        <form method="dialog" className="modal-backdrop">
+          <button>X</button>
+        </form>
+      </dialog>
     </>
   );
 };

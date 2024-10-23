@@ -39,7 +39,7 @@ export default function galeria() {
                     </p>
 
                     <div className="flex flex-col gap-2">
-                      <EventButton title={item.name} />
+                      <EventButton title={item.name} date={item.data} />
                       <p className="text-xs">{item.data}</p>
                     </div>
                   </div>
