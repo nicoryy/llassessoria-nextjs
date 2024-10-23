@@ -151,7 +151,7 @@ export const events = [
   {
     key: 7,
     name: "Curso Câmaras",
-    data: "22/02/2019",
+    data: "22 de janeiro de 2019",
     img: imgCursoCam1,
     list: [
       { key: 1, ref: imgCursoCam1 },
