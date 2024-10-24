@@ -29,6 +29,7 @@ export default function galeria() {
                       fill
                       className="object-cover rounded"
                       src={item.img}
+                      placeholder="blur"
                       alt="img"
                     />
                   </div>

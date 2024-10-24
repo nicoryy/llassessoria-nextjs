@@ -39,6 +39,7 @@ const EventButton = ({ title, date, imageList }: EventButtonProps) => {
               return (
                 <Image
                   loading="lazy"
+                  placeholder="blur"
                   className="rounded-box w-80"
                   src={item.ref}
                   alt={title}

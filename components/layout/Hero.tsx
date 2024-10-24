@@ -10,6 +10,7 @@ const Hero = ({ title, srcImage }: HeroProps) => {
     <section className="hero h-64 relative overflow-hidden">
       <Image
         src={srcImage}
+        placeholder='blur'
         alt={title}
         loading="lazy"
         quality={69}

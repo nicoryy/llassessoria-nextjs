@@ -71,9 +71,9 @@ export default function sobre() {
 
       <section className="py-20 px-20 bg-base-300 grid gap-10 grid-cols-1 lg:grid-cols-2 place-items-center">
         <Image
-          loading="lazy"
+          placeholder='blur'
           src={image1}
-          quality={60}
+          quality={75}
           alt="image1"
           width={400}
           height={200}
@@ -120,6 +120,7 @@ export default function sobre() {
         </div>
 
         <Image
+          placeholder='blur'
           loading="lazy"
           quality={60}
           src={image2}
@@ -132,6 +133,7 @@ export default function sobre() {
 
       <section className="py-20 px-20 bg-base-300 grid gap-10 grid-cols-1 lg:grid-cols-2 place-items-center">
         <Image
+          placeholder='blur'
           loading="lazy"
           src={image3}
           quality={60}
