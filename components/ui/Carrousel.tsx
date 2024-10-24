@@ -1,18 +1,14 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 
-interface Items {
-  id: number; // Adicionando id como parte da interface
+interface Item {
+  id: number;
   title: string;
-  sub: string; // Para o subtítulo
-  img: string; // A imagem agora é uma string
+  sub: string;
+  img: StaticImageData;
 }
 
-interface CarrouselProps {
-  items: Items[]; // Mudando para items
-}
-
-const Carrousel: React.FC<CarrouselProps> = ({ items }) => {
+const Carrousel = ({ items }: { items: Item[] }) => {
   return (
     <div className="carousel w-full h-[calc(100vh-68px)]">
       {items.map((item) => (
@@ -22,6 +18,7 @@ const Carrousel: React.FC<CarrouselProps> = ({ items }) => {
           className="carousel-item relative w-full grid place-items-center"
         >
           <Image
+            placeholder="blur"
             width={1920}
             height={1080}
             loading="lazy"
