@@ -1,10 +1,10 @@
-import img1 from "../assets/prefeituras/acarau.png";
-import img2 from "../assets/prefeituras/cagranja.png";
-import img3 from "../assets/prefeituras/caitarema.png";
-import img4 from "../assets/prefeituras/cpsma.png";
-import img5 from "../assets/prefeituras/general.png";
-import img6 from "../assets/prefeituras/granja.png";
-import img7 from "../assets/prefeituras/itarema.png";
+import img1 from "@/assets/prefeituras/acarau.png";
+import img2 from "@/assets/prefeituras/cagranja.png";
+import img3 from "@/assets/prefeituras/caitarema.png";
+import img4 from "@/assets/prefeituras/cpsma.png";
+import img5 from "@/assets/prefeituras/general.png";
+import img6 from "@/assets/prefeituras/granja.png";
+import img7 from "@/assets/prefeituras/itarema.png";
 
 export const prefeituras = [
   {
