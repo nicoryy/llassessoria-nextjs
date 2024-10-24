@@ -1,7 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["tonykarlos.com", "w3.cdn.cl9.cloud", "docs.uft.edu.br"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "tonykarlos.com",
+      },
+      {
+        protocol: "https",
+        hostname: "w3.cdn.cl9.cloud",
+      },
+      {
+        protocol: "https",
+        hostname: "docs.uft.edu.br",
+      },
+    ],
   },
 };
 
