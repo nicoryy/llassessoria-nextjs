@@ -11,7 +11,14 @@ interface CardBlogProps {
 const CardBlog = ({ title, description, img, data, link }: CardBlogProps) => {
   return (
     <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg hover:shadow-base-300">
-      <Image alt={title} width={224} height={224} src={img} className=" w-full object-cover" />
+      <Image
+        // placeholder="blur"
+        alt={title}
+        width={224}
+        height={224}
+        src={img}
+        className=" w-full object-cover"
+      />
 
       <div className="bg-base-200 p-4 sm:p-6 h-full">
         <time dateTime="2022-10-10" className="block text-xs text-base-content">
@@ -20,10 +27,14 @@ const CardBlog = ({ title, description, img, data, link }: CardBlogProps) => {
         </time>
 
         <a href="#">
-          <h3 className="mt-0.5 text-lg text-base-content font-bold">{title}</h3>
+          <h3 className="mt-0.5 text-lg text-base-content font-bold">
+            {title}
+          </h3>
         </a>
 
-        <p className="mt-2 line-clamp-3 text-sm/relaxed text-base-content">{description}</p>
+        <p className="mt-2 line-clamp-3 text-sm/relaxed text-base-content">
+          {description}
+        </p>
 
         <a
           href={link}

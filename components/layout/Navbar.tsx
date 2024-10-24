@@ -28,9 +28,7 @@ export const Navbar = () => {
     // DaisyUI
     <div
       className={`navbar bg-base-100 lg:px-10 ${
-        isFixed
-          ? "fixed z-50 shadow-xl bg-opacity-90 backdrop-blur-md"
-          : ""
+        isFixed ? "fixed z-50 shadow-xl bg-opacity-90 backdrop-blur-md" : ""
       }`}
     >
       <div className="navbar-start ">
@@ -83,7 +81,6 @@ export const Navbar = () => {
         <Link href="/" className="btn btn-ghost text-xl">
           <Image
             src={logo}
-            loading="lazy"
             alt="Logo da L&L Assessoria e Serviços"
             width={100}
             height={100}
